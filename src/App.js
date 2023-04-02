@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import banana from './banana.jpeg'
+import banana from './banana.jpeg';
+import kiwi from './kiwi.jpg';
+import apple from './apple.jpg'
 import './App.css';
-import { FontSizeOutlined, SearchOutlined } from '@ant-design/icons';
-import { Layout, Space } from 'antd';
+import { Layout, Button,Divider } from 'antd';
 
 
-const { Sider, Header, Content, Footer } = Layout;
+const { Sider, Content } = Layout;
 
-const headerStyle: React.CSSProperties = {
-  textAlign: 'left',
-  color: 'black',
-  height: 64,
-  paddingInline: '5000',
-  lineHeight: '64px',
-  backgroundColor: 'white',
-  minWidth: '5000px',
-  
-};
 
 const siderStyle: React.CSSProperties = {
-  textAlign: 'center',
+  textAlign: 'left',
   lineHeight: '120px',
   color: '#fff',
   backgroundColor: 'white',
@@ -34,55 +24,72 @@ const contentStyle: React.CSSProperties = {
   paddingInline: '5000',
   lineHeight: '64px',
   backgroundColor: 'white',
-  minWidth: '5000px',
 };
 
-const footerStyle: React.CSSProperties = {
-  textAlign: 'left',
-  color: 'black',
-  backgroundColor: 'white',
-  
-};
 
 function App() {
   return (
     <div className="App">
       <header className='webHeader'>我的订单</header>
-      <Layout>
 
-      <Sider style={siderStyle} className="img"><img src={banana} className="img"></img></Sider>
-        <Layout>
-          <Header style={headerStyle}>
-            <p className='itemName'>香蕉</p>
-          </Header>
-          <Content style={contentStyle}>
-            一把香蕉
-          </Content>
-          <Footer style={footerStyle}>
-            $5
-          </Footer>
-        </Layout>
+
+
+      <Layout>
+        <Sider style={siderStyle} className="img"><img src={banana} className="img"></img></Sider>
+          <Layout>
+            <Content style={contentStyle}>
+              <b>香蕉</b>
+           </Content>
+            <Content style={contentStyle}>
+             一把香蕉
+           </Content>
+           <Content style={contentStyle}>
+              $5
+              <Button style={{float:"right", margin:10}}>评价</Button>
+            </Content>
+         </Layout>
       </Layout>
 
 
+      <Divider></Divider>
+
       <Layout>
+        <Sider style={siderStyle} className="img"><img src={apple} className="img"></img></Sider>
+          <Layout>
+           <Content style={contentStyle}>
+             <b>苹果</b>
+            </Content>
+            <Content style={contentStyle}>
+              一筐苹果
+            </Content>
+            <Content style={contentStyle}>
+              $8
+              <Button style={{float:"right", margin:10}}>评价</Button>
+           </Content>
+          </Layout>
+      </Layout>
 
-        <Sider style={siderStyle} className="img"><img src={banana} className="img"></img></Sider>
-        <Layout>
-          <Header style={headerStyle}>
-            <p className='itemName'>香蕉</p>
-          </Header>
-          <Content style={contentStyle}>
-            一把香蕉
-          </Content>
-          <Footer style={footerStyle}>
-            $5
-          </Footer>
-  </Layout>
+
+      <Divider></Divider>
 
 
+      <Layout>
+        <Sider style={siderStyle} className="img"><img src={kiwi} className="img"></img></Sider>
+          <Layout>
+            <Content style={contentStyle}>
+              <b>猕猴桃</b>
+            </Content>
+            <Content style={contentStyle}>
+              两个猕猴桃
+            </Content>
+            <Content style={contentStyle}>
+              $2
+              <Button style={{float:"right", margin:10}}>评价</Button>
+            </Content>
+          </Layout>
+      </Layout>
 
-</Layout>
+
 
 
 
