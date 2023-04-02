@@ -62,9 +62,6 @@ function App() {
             $5
           </Footer>
         </Layout>
-
-      
-      
       </Layout>
 
 
