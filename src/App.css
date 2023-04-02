@@ -13,8 +13,10 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+
+
+.App-header-1 {
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +26,37 @@
   color: white;
 }
 
+.webHeader {
+  background-color: red;
+  min-height: 50px;
+  text-align: center;
+  color: white;
+}
+
+.img {
+  background-color: white;
+  max-height: 200px;
+  max-width: 200px;
+  display: flex;
+}
+
+.itemName {
+  background-color: white;
+  color: balck;
+  font-size: medium;
+  
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.App-header-1 p code{
+  color:blue;
+}
+
+.App-link{
+  color: red;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +67,5 @@
     transform: rotate(360deg);
   }
 }
+
+
