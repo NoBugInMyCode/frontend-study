@@ -27,7 +27,9 @@ const contentStyle: React.CSSProperties = {
   backgroundColor: 'white',
 };
 
-
+function apear(id) {
+  document.getElementById(id).style.display = 'flex'
+}
 
 function App() {
   return (
@@ -47,10 +49,10 @@ function App() {
            </Content>
            <Content style={contentStyle}>
               $5
-              <Button style={{float:"right", margin:10}}>评价</Button>
+              <Button id='bananaButton' style={{float:"right", margin:10}} onClick={apear('bananaInput')}>评价</Button>
             </Content>
-            <TextArea autoSize="true" className='inputBoxApple'></TextArea>
-            <Rate></Rate>
+            <TextArea autoSize="true" className='inputBoxBanana' id='bananaInput'></TextArea>
+            <Rate className='rateBoxBanana' id = 'rateBanana'></Rate>
          </Layout>
       </Layout>
 
@@ -71,7 +73,7 @@ function App() {
               <Button style={{float:"right", margin:10}}>评价</Button>
            </Content>
             <TextArea autoSize="true" className='inputBoxApple'></TextArea>
-            <Rate></Rate>
+            <Rate className='rateBoxApple'></Rate>
           </Layout>
       </Layout>
 
@@ -92,8 +94,8 @@ function App() {
               $2
               <Button style={{float:"right", margin:10}}>评价</Button>
             </Content>
-            <TextArea autoSize="true" className='inputBoxApple'></TextArea>
-            <Rate></Rate>
+            <TextArea autoSize="true" className='inputBoxKiwi'></TextArea>
+            <Rate className='rateBoxKiwi'></Rate>
           </Layout>
       </Layout>
 

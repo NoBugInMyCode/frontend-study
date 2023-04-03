@@ -15,7 +15,27 @@
 
 
 .inputBoxApple {
-  
+  display: none;
+}
+
+.inputBoxBanana {
+  display: none;
+}
+
+.inputBoxKiwi {
+  display: none;
+}
+
+.rateBoxApple {
+  display: none;
+}
+
+.rateBoxBanana {
+  display: none;
+}
+
+.rateBoxKiwi {
+  display: none;
 }
 
 .App-header-1 {
