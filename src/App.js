@@ -2,11 +2,12 @@ import banana from './banana.jpeg';
 import kiwi from './kiwi.jpg';
 import apple from './apple.jpg'
 import './App.css';
-import { Layout, Button,Divider } from 'antd';
+import { Layout, Button,Divider, Input, Rate } from 'antd';
+import TextArea from 'antd/es/input/TextArea';
 
 
 const { Sider, Content } = Layout;
-
+const { textArea } = Input
 
 const siderStyle: React.CSSProperties = {
   textAlign: 'left',
@@ -25,6 +26,7 @@ const contentStyle: React.CSSProperties = {
   lineHeight: '64px',
   backgroundColor: 'white',
 };
+
 
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
               $5
               <Button style={{float:"right", margin:10}}>评价</Button>
             </Content>
+            <TextArea autoSize="true" className='inputBoxApple'></TextArea>
+            <Rate></Rate>
          </Layout>
       </Layout>
 
@@ -66,6 +70,8 @@ function App() {
               $8
               <Button style={{float:"right", margin:10}}>评价</Button>
            </Content>
+            <TextArea autoSize="true" className='inputBoxApple'></TextArea>
+            <Rate></Rate>
           </Layout>
       </Layout>
 
@@ -86,6 +92,8 @@ function App() {
               $2
               <Button style={{float:"right", margin:10}}>评价</Button>
             </Content>
+            <TextArea autoSize="true" className='inputBoxApple'></TextArea>
+            <Rate></Rate>
           </Layout>
       </Layout>
 
