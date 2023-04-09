@@ -81,6 +81,16 @@ function App() {
     setDataSource(dataSource.map(data => ({ ...data })));
   }
 
+  // 定义一个函数，来修改用户编辑的评分，等同于 function onChangeRate(index, rate) {}
+  const onChangeRate = (index, rate) => {
+    // 将 dataSource 拷贝到局部变量 data
+    const data = dataSource.map(d => ({ ...d }));
+    data[index].rate = rate;
+    setDataSource(data);
+  }
+
+  console.log('>>>>>>: ', dataSource);
+
   return (
     <div className="App">
       <header className='webHeader'>我的订单</header>
@@ -107,12 +117,15 @@ function App() {
                     data.show ? (
                       <div>
                         <TextArea autoSize="true" className='inputBoxBananaxxx' id='bananaInputxx' value={data.comment}></TextArea>
-                        <Rate className='rateBoxBananasss' id = 'rateBanana' value={data.rate}></Rate>
+                        <Rate
+                          className='rateBoxBananasss'
+                          id = 'rateBanana' 
+                          value={data.rate}
+                          onChange={(val) => { onChangeRate(index, val) }}
+                        />
                       </div>
                     ) : null
                   }
-                    {/* <TextArea autoSize="true" className='inputBoxBanana' id='bananaInput'></TextArea>
-                    <Rate className='rateBoxBanana' id = 'rateBanana'></Rate> */}
                 </Layout>
               </Layout>
               { index !== data.length ?  <Divider /> : null }
@@ -120,89 +133,6 @@ function App() {
           );
         })
       }
-
-
-
-      {/* <Layout>
-        <Sider style={siderStyle} className="img"><img src={banana} className="img"></img></Sider>
-          <Layout>
-            <Content style={contentStyle}>
-              <b>香蕉</b>
-           </Content>
-            <Content style={contentStyle}>
-             一把香蕉
-           </Content>
-           <Content style={contentStyle}>
-              $5
-              <Button id='bananaButton' style={{float:"right", margin:10}} onClick={apear('bananaInput')}>评价</Button>
-            </Content>
-            <TextArea autoSize="true" className='inputBoxBanana' id='bananaInput'></TextArea>
-            <Rate className='rateBoxBanana' id = 'rateBanana'></Rate>
-         </Layout>
-      </Layout>
-
-
-      <Divider></Divider>
-
-      <Layout>
-        <Sider style={siderStyle} className="img"><img src={apple} className="img"></img></Sider>
-          <Layout>
-           <Content style={contentStyle}>
-             <b>苹果</b>
-            </Content>
-            <Content style={contentStyle}>
-              一筐苹果
-            </Content>
-            <Content style={contentStyle}>
-              $8
-              <Button style={{float:"right", margin:10}}>评价</Button>
-           </Content>
-            <TextArea autoSize="true" className='inputBoxApple'></TextArea>
-            <Rate className='rateBoxApple'></Rate>
-          </Layout>
-      </Layout>
-
-
-      <Divider></Divider>
-
-
-      <Layout>
-        <Sider style={siderStyle} className="img"><img src={kiwi} className="img"></img></Sider>
-          <Layout>
-            <Content style={contentStyle}>
-              <b>猕猴桃</b>
-            </Content>
-            <Content style={contentStyle}>
-              两个猕猴桃
-            </Content>
-            <Content style={contentStyle}>
-              $2
-              <Button style={{float:"right", margin:10}}>评价</Button>
-            </Content>
-            <TextArea autoSize="true" className='inputBoxKiwi'></TextArea>
-            <Rate className='rateBoxKiwi'></Rate>
-          </Layout>
-      </Layout> */}
-
-
-
-
-
-
-      {/* <header className="App-header-1">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. aaaaaaa
-        </p>
-        <a
-          className="App-link"
-          href="https://google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Go to google
-        </a>
-      </header> */}
     </div>
   );
 }
