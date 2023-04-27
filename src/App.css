@@ -1,94 +1,36 @@
-.App {
-  text-align: center;
+.TODO_LIST {
+  padding: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-introduce-wrapper {
+  border: 1px solid #3b7af0;
+  background-color: #b7c8e7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-introduce {
+  padding: 12px 0;
 }
 
-
-.inputBoxApple {
-  display: none;
-}
-
-.inputBoxBanana {
-  display: none;
-}
-
-.inputBoxKiwi {
-  display: none;
-}
-
-.rateBoxApple {
-  display: none;
-}
-
-.rateBoxBanana {
-  display: none;
-}
-
-.rateBoxKiwi {
-  display: none;
-}
-
-.App-header-1 {
-  background-color: white;
-  min-height: 100vh;
+.task-detail {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 12px;
 }
 
-.webHeader {
-  background-color: red;
-  min-height: 50px;
-  text-align: center;
-  color: white;
+.task-detail>.icon {
+  color: blue;
+  padding-right: 12px;
 }
 
-.img {
-  background-color: white;
-  max-height: 200px;
-  max-width: 200px;
-  display: flex;
+.task-detail>.detail {
+  flex: 1;
 }
 
-.itemName {
-  background-color: white;
-  color: balck;
-  font-size: medium;
-  
+.task-detail>.view-detail {
+  color: #FFF;
 }
 
-.App-link {
-  color: #61dafb;
+.task-list {
+  margin: 12px 0;
 }
-
-.App-header-1 p code{
-  color:blue;
-}
-
-.App-link{
-  color: red;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
